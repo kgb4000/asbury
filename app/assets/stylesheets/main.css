@@ -31,8 +31,9 @@ header {
 	overflow: hidden;
 }
 
-section.events {
-	clear: both;
+div.menu a {
+	display: block;
+	text-align: center;
 }
 
 .section-title {
@@ -84,13 +85,18 @@ form {
 }
 
 h1.logo {
-	float: left;
+	text-align: center;
 	font-size: 1.4em;
 	padding: 15px 0;
 }
 
+div.menu {
+	padding: 15px;
+	line-height: 1.8;
+}
+
 nav ul.navigation {
-	float: right;
+	display: none;
 }
 
 ul.navigation li {
@@ -98,8 +104,4 @@ ul.navigation li {
 	list-style-type: none;
 	padding: 15px;
 	line-height: 1.8;
-}
-
-ul.navigation li a {
-
 }
