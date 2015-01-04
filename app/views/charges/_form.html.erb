@@ -1,0 +1,58 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<%= form_tag charges_path, id: 'payment-form' do %>
+  <input type="integer" name="amount" id="custom-donation-amount"  placeholder="$100" />
+
+  <button id="customButton" class="btn-submit tithe-btn">Process Tithe</button>
+<% end %>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_k0yr7cNdCaxLrQgAZtf0LRe5',
+    image: '/square-image.png',
+    token: function(response) {
+    
+
+      var $form = $('#payment-form');
+
+      if (response.error) {
+        // Show the errors on the form
+        alert(response.error.message);
+       // $form.find('button').prop('disabled', false);
+      } else {
+        // response contains id and card, which contains additional card details
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // $form.append($('<input type="hidden" name="email" />').val(response.email));
+        // and submit
+        $form.get(0).submit();
+      }
+
+
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+  $('#customButton').on('click', function(e) {
+     e.preventDefault();
+    var amount = parseFloat($('#custom-donation-amount').val());
+    if (amount < 0.50) {
+      alert('Sorry, it must be more than 50 cents.');
+      return;
+    }
+    // Open Checkout with further options
+    handler.open({
+      name: 'Asbury Broadneck UMC',
+      description: 'Tithes',
+      amount: amount * 100
+    });
+   
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>

@@ -2,7 +2,7 @@
 	<h1><%= link_to "Asbury Broadneck UMC", root_path, id: "brand" %></h1>
 	<nav>
 		<ul class="secondary-nav">
-			<li><a href="#" class="nav-link tithe-btn">Tithe</a></li>
+			<li><%= link_to "Tithe", new_charge_path, class: 'nav-link tithe-btn' %></li>
 			<li><a href="#" class="primary-nav-trigger nav-link menu-text btn-open">Menu</a></li>
 		</ul>
 	</nav>
@@ -25,8 +25,7 @@
 	    <li><a href="#">History</a></li>
 	    <li><a href="#">About us</a></li>
 	    <li><a href="#">Contact us</a></li>
-	    <li><a href="#">Tithe here</a></li>
-	    <li><label>Connect with us</label></li>
+	    <li><%= link_to "Tithe here", new_charge_path %></li>
 	    <li><a href="#">Facebook</a></li>
 	    <li><a href="#">Twitter</a></li>
 	    <li><a href="#">Instagram</a></li>

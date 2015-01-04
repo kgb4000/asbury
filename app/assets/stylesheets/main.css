@@ -146,8 +146,6 @@ ul.nav-wrap > li a:hover {
 	overflow: auto;
 }
 
-
-
 /********************
 Form
 *********************/
@@ -198,6 +196,35 @@ form {
 	padding: .6em 1em;
 	font-size: 1em;
 	background: rgb(28, 184, 65); /* this is a green */
+  display: block;
+}
+
+/********************
+Tithe
+*********************/
+
+.tithe-form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#payment-form p {
+  font-size: .8em;
+}
+
+.tithe-btn {
+  margin: 0 auto;
+}
+
+#custom-donation-amount {
+  height: 100px;
+  font-size: 4em;
+  text-align: center;
+  background: #eee;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  margin: .5em 0;
 }
 
 
