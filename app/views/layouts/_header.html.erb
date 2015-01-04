@@ -1,18 +1,35 @@
-<header>
-	<div class="header">
-		<h1 class="logo">Asbury Broadneck UMC</h1>
-	</div>
-	<div class="menu">
-		<a href="#">Menu</a>
-	</div>
+<header class="header">
+	<h1><%= link_to "Asbury Broadneck UMC", root_path, id: "brand" %></h1>
 	<nav>
-		<ul class="navigation">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Sermons</a></li>
-			<li><a href="#">Church events</a></li>
-			<li><a href="#">Tithe</a></li>
-			<li><a href="#">Contact us</a></li>
+		<ul class="secondary-nav">
+			<li><a href="#" class="nav-link tithe-btn">Tithe</a></li>
+			<li><a href="#" class="primary-nav-trigger nav-link menu-text btn-open">Menu</a></li>
 		</ul>
 	</nav>
 </header>
+
+<div class="overlay">
+	<h1><%= link_to "Asbury Broadneck UMC", root_path, id: "brand" %></h1>
+	<nav>
+		<ul class="secondary-nav">
+	    <li><a href="#" class="btn-close nav-link menu-text-close">Close</a></li>
+	  </ul>
+	</nav>
+	<div class="container">
+		<ul class="nav-wrap">
+	    <li><a href="#">I'm new</a></li>
+	    <li><a href="#">Sermons</a></li>
+	    <li><a href="#">Church events</a></li>
+	    <li><a href="#">Ministries</a></li>
+	    <li><a href="#">Pastor's blog</a></li>
+	    <li><a href="#">History</a></li>
+	    <li><a href="#">About us</a></li>
+	    <li><a href="#">Contact us</a></li>
+	    <li><a href="#">Tithe here</a></li>
+	    <li><label>Connect with us</label></li>
+	    <li><a href="#">Facebook</a></li>
+	    <li><a href="#">Twitter</a></li>
+	    <li><a href="#">Instagram</a></li>
+	  </ul>
+	</div>
+</div>

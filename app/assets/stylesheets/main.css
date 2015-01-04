@@ -12,7 +12,14 @@ body {
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  font-size:  100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
@@ -26,15 +33,124 @@ a {
 	color: #000;
 }
 
-header {
-	padding: 20px 5%;
-	overflow: hidden;
+a.tithe-btn {
+  background: #c0392b;
+  color: #f8f8f8;
 }
 
-div.menu a {
-	display: block;
-	text-align: center;
+/********************
+Heading 
+*********************/
+
+header {
+  text-align: center;
+  margin: 0 0 30px 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+#brand {
+  text-align: center;
+  font-size: .8em;
+  font-weight: 900;
+  display: block;
+  padding-bottom: 1em;
+}
+
+/********************
+Navigation
+*********************/
+
+nav {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  padding: 0 10px 0 0;
+}
+
+nav a {
+  font-weight: 800px;
+  padding: 15px 10px;
+}
+
+.nav-link {
+  font-size: .61111em;
+  padding: 1em 1.63636em;
+}
+
+.nav-link {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  display: inline-block;
+  font-family: "Open Sans";
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+  -webkit-transition: background 0.1s ease-out, border 0.1s ease-out;
+  transition: background 0.1s ease-out, border 0.1s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #c0392b;
+  overflow: auto;
+}
+
+ul.nav-wrap {
+  border-bottom:  1px solid #575757;
+  text-transform: uppercase;
+  padding: 40px 0 100px;
+}
+
+ul.nav-wrap > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding-top: 1em;
+}
+
+ul.nav-wrap > li a {
+  font-size: 2em;
+  font-weight: 900;
+  color: #d6d6d6;
+  display: block;
+  text-decoration: none;
+  color: #222;
+}
+
+ul.nav-wrap > li a:hover {
+  color: #f8f8f8;
+}
+
+.overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: #fcc100;
+	overflow: auto;
+}
+
+
+
+/********************
+Form
+*********************/
 
 .section-title {
 	padding: 1em 0;
@@ -54,7 +170,7 @@ input[type="text"],
 input[type="date"],
 input[type="time"],
 textarea {
-	height: 40px;
+	height: 44px;
 	width: 100%;
 	box-sizing: border-box;
 	-webkit-box-sizing:border-box;
@@ -84,24 +200,4 @@ form {
 	background: rgb(28, 184, 65); /* this is a green */
 }
 
-h1.logo {
-	text-align: center;
-	font-size: 1.4em;
-	padding: 15px 0;
-}
 
-div.menu {
-	padding: 15px;
-	line-height: 1.8;
-}
-
-nav ul.navigation {
-	display: none;
-}
-
-ul.navigation li {
-	float: left;
-	list-style-type: none;
-	padding: 15px;
-	line-height: 1.8;
-}
