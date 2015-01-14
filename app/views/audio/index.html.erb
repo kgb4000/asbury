@@ -1,0 +1,22 @@
+
+<div class="container">
+
+  <h1 class="section-title">Sermons</h1>
+
+  <% @audio.each do |audio| %>
+
+    <div class="field">
+      <%= audio.music_file_name %>
+    </div>
+
+    <div class="field">
+      <%= audio_tag audio.music.url, :controls => true %>
+    </div>
+
+    <%= link_to 'Show', audio %> |
+    <%= link_to 'Edit', edit_audio_path(audio) %> |
+    <%= link_to 'Destroy', audio, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <% end %>
+
+</div>

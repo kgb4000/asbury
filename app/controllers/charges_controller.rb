@@ -10,7 +10,7 @@ class ChargesController < ApplicationController
     amount = params[:amount].to_f * 100
 
     if amount < 50
-      @error = "Cheapo"
+      @error = "Please enter an amount more than 50 cents please."
       render :new
       return
     end

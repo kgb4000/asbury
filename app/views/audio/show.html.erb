@@ -1,0 +1,6 @@
+
+<div class="container">
+	<h1>Show music</h1>
+	<p><%= @audio.music_file_name %></p>
+	<div><%= audio_tag @audio.music.url, :controls => true %></div>
+</div>

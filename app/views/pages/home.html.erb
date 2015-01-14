@@ -1,17 +1,39 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
-<div class="page-header">
-  <div class="main-text-center-page">
-    <h1 class="main-greeting">Come to Church</h1>
-    <p class="intro-text">Come to Asbury Broadneck UMC and learn love and grow with God</p>
-    <p><a href="#" class="btn" role="button">Learn more &raquo;</a></p>
-    <div class="sunday-service">
-      <p class="center">Sunday School 9:00am</p>
-      <p class="center">Sunday Worship 10:15am</p>
-    </div>
-  </div>
-</div> 
+<section class="page-header">
+	<div class="container">
+	  <div class="main-text-center-page">
+	    <h1 class="main-greeting">Come to Church</h1>
+	    <p class="intro-text">Come to Asbury Broadneck UMC and learn to love and grow with God</p>
+	    <div class="sunday-service">
+	      <p class="center">Sunday School 9:00am</p>
+	      <p class="center">Sunday Worship 10:15am</p>
+	    </div>
+	  </div>
+	</div>
+</section>
 
 <section class="events">
-	<h2 class="section-title">Church Events</h2>
+	<div class="container">
+		<h2 class="section-title">Church Events</h2>
+		<% @events.each do |event| %>
+		  <section class="event-show">
+		    <p class="event-date"><%= event.date %></p>
+		    <div class="event-info">
+		      <p class="event-name"><%= link_to event.name, event_path(event) %></p>
+		      <div class="time-location">
+		        <span class="event-time"><%= event.time %></span> :
+		        <span class="event-location"><%= event.location %></span>
+		      </div>
+		      <div class="clear"></div>
+		    </div>
+		  </section>
+	 	<% end %>
+	</div>
+</section>
+
+<section class="sermons">
+	<div clas="container">
+		<h2 class="section-title">Sermons</h2>
+	</div>
 </section>

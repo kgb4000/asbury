@@ -30,12 +30,13 @@ li {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: #222;
 }
 
 a.tithe-btn {
   background: #c0392b;
   color: #f8f8f8;
+  border: #c0392b;
 }
 
 /********************
@@ -44,10 +45,13 @@ Heading
 
 header {
   text-align: center;
-  margin: 2em auto;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  margin-right: auto;
+  margin-left: auto;
   width: 100%;
-  position: absolute;
   z-index: 9999;
+  overflow: hidden;
 }
 
 #brand {
@@ -56,11 +60,13 @@ header {
   font-weight: 900;
   display: block;
   padding-bottom: 1em;
+  color: #222;
 }
 
 h1.main-greeting {
   font-size: 2.2em;
   margin: 1em 0;
+  color: #222;
 }
 
 p.intro-text {
@@ -69,11 +75,15 @@ p.intro-text {
   margin-bottom: 1em;
 }
 
+div.sunday-service {
+  padding-top: 3em;
+}
+
 div.sunday-service p {
-  font-size: 1.1em;
+  font-size: 1em;
   overflow: hidden;
-  margin: 1.5em 0;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1em 2em;
+  border: 1px solid rgba(0, 0, 0, 0.9);
   display: inline-block;
   padding: 7px 5%;
 }
@@ -93,6 +103,10 @@ nav ul {
   padding: 0;
 }
 
+nav ul.desktop-nav {
+  display: none;
+}
+
 nav li {
   display: inline;
   padding: 0 10px 0 0;
@@ -109,7 +123,7 @@ nav a {
 }
 
 .nav-link {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 0px;
   display: inline-block;
   font-family: "Open Sans";
@@ -168,11 +182,9 @@ ul.nav-wrap > li a:hover {
 }
 
 .page-header {
-  display: table;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  /*background: url("../img/washed-out.jpg") no-repeat center center scroll; */
+  width: 100%; 
+  height: 70%;
+  background-image: url("/assets/chuch-front.JPG");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -181,7 +193,6 @@ ul.nav-wrap > li a:hover {
 }
 
 .main-text-center-page {
-  display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
@@ -193,7 +204,8 @@ Form
 *********************/
 
 .section-title {
-	padding: 1em 0;
+  text-align: center;
+	padding-bottom: 1em;
 }
 
 .field {
@@ -239,6 +251,7 @@ form {
 	font-size: 1em;
 	background: rgb(28, 184, 65); /* this is a green */
   display: block;
+  cursor: pointer;
 }
 
 
@@ -276,6 +289,114 @@ Church Events
 
 h2.section-title {
   text-align: center;
+  padding: 1em 0;
 }
+
+section.event-show {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 5%;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+p.event-date {
+  width: 30%;
+  float: left;
+  margin-right: 2%;
+  font-size: 2em;
+  margin: 0;
+}
+
+div.event-info {
+  width: 68%;
+  float: right;
+  font-size: 1em;
+}
+
+p.event-name {
+  margin-bottom: .6em;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.event-time,
+.event-location {
+  font-size: .8em;
+}
+
+.clear {
+  clear: both;
+}
+
+.action-links {
+  margin: 1em 0;
+}
+
+/********************
+Sermons
+*********************/
+
+section.sermons {
+  clear: both;
+  margin: 2em 0;
+}
+
+/********************
+Media Queries
+*********************/
+
+
+
+@media (min-width: 720px) {
+
+  header {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+
+  #brand {
+    float: left;
+  }
+
+  nav {
+    float: right;
+    text-align: right;
+    padding: 2em 0;
+  }
+
+  nav ul.secondary-nav {
+    display: none;
+  }
+
+  nav ul.desktop-nav {
+    display: inline-block;
+  }
+
+  section.page-header {
+    clear: both;
+  }
+
+  section.event-show {
+    width: 45%;
+    margin: 2.5%;
+    padding: 2%;
+    float: left;
+  }
+
+  p.event-date {
+    font-size: 1.5em;
+    margin-right: 5%;
+  }
+
+  div.event-info {
+    width: 65%;
+  }
+
+}
+
+
+
+
 
 

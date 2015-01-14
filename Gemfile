@@ -19,6 +19,8 @@ gem 'figaro'
 gem 'aws-sdk'
 gem 'stripe', '~> 1.15.0'
 
+gem 'pickadate-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -32,4 +34,5 @@ group :production do
 	gem 'rails_12factor'
 	gem 'thin'
 end   
+
 

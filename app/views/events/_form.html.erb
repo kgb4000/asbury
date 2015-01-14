@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :time %>
-    <%= f.time_field :time, placeholder: "Time of the event", id: "timepicker" %>
+    <%= f.text_field :time, placeholder: "Time of the event", id: "timepicker" %>
   </div>
   <div class="field">
     <%= f.label :location %>
@@ -40,3 +40,4 @@
     <%= f.submit "Create event", class: "btn-submit" %>
   </div>
 <% end %>
+

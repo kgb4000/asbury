@@ -1,11 +1,22 @@
 <header class="header">
-	<h1><%= link_to "Asbury Broadneck UMC", root_path, id: "brand" %></h1>
-	<nav>
-		<ul class="secondary-nav">
-			<li><%= link_to "Tithe", new_charge_path, class: 'nav-link tithe-btn' %></li>
-			<li><a href="#" class="primary-nav-trigger nav-link menu-text btn-open">Menu</a></li>
-		</ul>
-	</nav>
+	<div class="container">
+		<h1><%= link_to "Asbury Broadneck UMC", root_path, id: "brand" %></h1>
+		<nav>
+			<ul class="secondary-nav">
+				<li><%= link_to "Tithe", new_charge_path, class: 'nav-link tithe-btn' %></li>
+				<li><a href="#" class="primary-nav-trigger nav-link menu-text btn-open">Menu</a></li>
+			</ul>
+			<ul class="desktop-nav">
+	    <li><a href="#">Sermons</a></li>
+	    <li><%= link_to "Church events", events_path %></a></li>
+	    <li><a href="#">Pastor's blog</a></li>
+	    <li><a href="#">About us</a></li>
+	    <li><a href="#">Shop</a></li>
+	    <li><a href="#">Contact us</a></li>
+	    <li><%= link_to "Tithe here", new_charge_path %></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 
 <div class="overlay">
@@ -19,7 +30,7 @@
 		<ul class="nav-wrap">
 	    <li><a href="#">I'm new</a></li>
 	    <li><a href="#">Sermons</a></li>
-	    <li><a href="#">Church events</a></li>
+	    <li><%= link_to "Church events", events_path %></a></li>
 	    <li><a href="#">Ministries</a></li>
 	    <li><a href="#">Pastor's blog</a></li>
 	    <li><a href="#">History</a></li>
