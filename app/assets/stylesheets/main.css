@@ -15,7 +15,6 @@ body {
   color: #444;
   font-family: 'Open Sans', sans-serif;
   font-size:  100%;
-  -webkit-font-smoothing: antialiased;
 }
 
 li {
@@ -56,10 +55,10 @@ header {
 
 #brand {
   text-align: center;
-  font-size: .7em;
+  font-size: .8em;
   font-weight: 900;
   display: block;
-  padding-bottom: 1em;
+  padding: 1em;
   color: #222;
 }
 
@@ -71,7 +70,7 @@ h1.main-greeting {
 
 p.intro-text {
   font-size: 1.3em;
-  font-weight: bolder;
+  font-weight: 700;
   margin-bottom: 1em;
 }
 
@@ -183,7 +182,8 @@ ul.nav-wrap > li a:hover {
 
 .page-header {
   width: 100%; 
-  height: 70%;
+  height: auto;
+  padding-bottom: 3em;
   background-image: url("/assets/chuch-front.JPG");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -351,8 +351,14 @@ Media Queries
 @media (min-width: 720px) {
 
   header {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  section.announcements {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2em;
+    font-weight: bold;
   }
 
   #brand {
@@ -373,6 +379,16 @@ Media Queries
     display: inline-block;
   }
 
+  h1.main-greeting {
+    font-size: 4em;
+  }
+
+  p.intro-text {
+    font-size: 2em;
+    width: 80%;
+    margin: 1em auto;
+  }
+
   section.page-header {
     clear: both;
   }
@@ -391,6 +407,11 @@ Media Queries
 
   div.event-info {
     width: 65%;
+  }
+
+  .event-time,
+  .event-location {
+    font-size: 1em;
   }
 
 }

@@ -1,8 +1,5 @@
 class Charge < ActiveRecord::Base
 
-	validates :amount, presence: true
-  validates_numericality_of :amount,
-  greater_than: 49,
-  message: "Must be at least 50 cents please"
+  validates :amount, numericality: { greater_than_or_equal_to: 0.49 }
 
 end
