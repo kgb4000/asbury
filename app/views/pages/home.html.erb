@@ -13,6 +13,16 @@
 	</div>
 </section>
 
+<section class="announcements">
+	<div class="container">
+		<p><span class="announcements">Asbury announcements : </span>
+		<% @announcements.each do |announcement| %>
+			<%= link_to announcement.title, announcement_path(announcement) %>
+		<% end %>
+		</p>
+	</div>
+</section>
+
 <section class="events">
 	<div class="container">
 		<h2 class="section-title">Church Events</h2>
@@ -29,6 +39,16 @@
 		    </div>
 		  </section>
 	 	<% end %>
+	</div>
+</section>
+
+<section class="twitter-feed clear">
+	<div class="container">
+		<p><span class="announcements">Asbury tweets : </span>
+		<% @announcements.each do |announcement| %>
+			<%= link_to announcement.title, announcement_path(announcement) %>
+		<% end %>
+		</p>
 	</div>
 </section>
 

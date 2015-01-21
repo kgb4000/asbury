@@ -1,0 +1,24 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Announcements</h1>
+    
+      <% @announcements.each do |announcement| %>
+        <div class="announcement-section">
+          <div class="annoucement-index-title"><%= announcement.title %></div>
+          <div class="ann-index-description"><%= announcement.description %></div>
+          <div class="ann-index-date"><%= announcement.date %></div>
+          <div>
+            <%= link_to 'Show', announcement %> |
+            <%= link_to 'Edit', edit_announcement_path(announcement) %> |
+            <%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      <% end %>
+
+  <br>
+
+  <%= link_to 'New Announcement', new_announcement_path %>
+
+</div>

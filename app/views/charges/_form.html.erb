@@ -1,9 +1,9 @@
-<script src="https://checkout.stripe.com/checkout.js"></script>
+
 
 <%= form_tag charges_path, id: 'payment-form' do %>
   <input type="integer" name="amount" id="custom-donation-amount"  placeholder="$100" />
 
-  <button id="customButton" class="btn-submit tithe-btn">Process Tithe</button>
+  <button id="customButton" class="btn-submit tithe-btn" "data-no-turbolink" >Process Tithe</button>
 <% end %>
 
 <script>
@@ -35,7 +35,7 @@
     }
   });
 
-  $('#customButton').on('click', function(e) {
+  $('#customButton').on('click page:change', function(e) {
      e.preventDefault();
     var amount = parseFloat($('#custom-donation-amount').val());
     if (amount < 0.50) {

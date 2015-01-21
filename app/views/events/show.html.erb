@@ -1,28 +1,27 @@
 <section class="container">
   <div class="events">
 
-    <p>
-      <%= @event.name %>
-    </p>
+    
+    <div class="event-name"><%= @event.name %></div>
+    
 
-    <p>
-      <%= @event.date %>
-    </p>
-
-    <p>
-      <%= @event.time %>
-    </p>
-
-    <p>
+    <div>
+      <span class="date"><%= @event.date %></span>
+      <span class="time"><%= @event.time %></span>
+    </div>
+    
+    <div>
       <%= @event.description %>
-    </p>
+    </div>
 
-    <p>
+    <% if present? %>
       <%= @event.image %>
-    </p>
+    <% end %>
 
-    <%= link_to 'Edit', edit_event_path(@event) %> |
-    <%= link_to 'Back', events_path %>
+    <div>
+      <%= link_to 'Edit', edit_event_path(@event) %> |
+      <%= link_to 'Back', events_path %>
+    </div>
 
   </div>
 </section>

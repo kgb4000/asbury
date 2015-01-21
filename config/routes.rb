@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :announcements
+
   get 'pages/home'
 
   get 'pages/tithing'

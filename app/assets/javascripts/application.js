@@ -19,7 +19,6 @@
 //= require turbolinks
 //= require_tree .
 
-var newDate = Date();
 
 $(document).ready(function(){ 
 	$("#datepicker").pickadate({
@@ -27,5 +26,7 @@ $(document).ready(function(){
 	});
 	$("#timepicker").pickatime();
 });
+
+
 
 

@@ -5,18 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<% if controller.controller_name == 'charges' %>
+  <body data-no-turbolink>
+<% else %>
+  <body >
+<% end %>
 	<body>
 		<%= render 'layouts/header' %>
-
-		<div class="notice">
-	    <%= flash[:notice] %>
-	  </div>
-	  <div class="alert-div">
-	    <%= flash[:alert] %>
-	  </div>
+		<div class="container">
+			<div class="notice">
+		    <%= flash[:notice] %>
+		  </div>
+		  <div class="alert-div">
+		    <%= flash[:alert] %>
+		  </div>
+		</div>
 
 		<%= yield %>
 

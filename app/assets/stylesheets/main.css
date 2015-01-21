@@ -33,7 +33,7 @@ a {
 }
 
 a.tithe-btn {
-  background: #c0392b;
+  background: #e74c3c;
   color: #f8f8f8;
   border: #c0392b;
 }
@@ -44,7 +44,6 @@ Heading
 
 header {
   text-align: center;
-  margin-top: 1em;
   margin-bottom: .5em;
   margin-right: auto;
   margin-left: auto;
@@ -53,12 +52,22 @@ header {
   overflow: hidden;
 }
 
+section.announcements {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2em;
+  font-size: .9em;
+}
+
+span.announcements {
+  font-weight: bold;
+}
+
 #brand {
   text-align: center;
-  font-size: .8em;
+  font-size: 1em;
+  margin-bottom: 1em;
   font-weight: 900;
   display: block;
-  padding: 1em;
   color: #222;
 }
 
@@ -81,7 +90,7 @@ div.sunday-service {
 div.sunday-service p {
   font-size: 1em;
   overflow: hidden;
-  margin: 1em 2em;
+  margin: 1.5em 2.5em;
   border: 1px solid rgba(0, 0, 0, 0.9);
   display: inline-block;
   padding: 7px 5%;
@@ -248,8 +257,9 @@ form {
 	border-radius: 4px;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	padding: .6em 1em;
+  margin: 1em 0;
 	font-size: 1em;
-	background: rgb(28, 184, 65); /* this is a green */
+	background: #e74c3c;
   display: block;
   cursor: pointer;
 }
@@ -284,6 +294,41 @@ Tithe
 }
 
 /********************
+Announcements
+*********************/
+
+section.announcements,
+section.twitter-feed {
+  text-align: center;
+  font-size: 1.1em;
+  color: #fff;
+  background: #e74c3c;
+  padding: 2em 0;
+}
+
+.announcement-section {
+  margin: 1em 0;
+}
+
+.annoucement-index-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.announcement-title {
+  font-size: 2em;
+}
+
+section.announcements a {
+  color: #f8f8f8;
+}
+
+span.announcements {
+  display: block;
+  margin-bottom: .5em;
+}
+
+/********************
 Church Events
 *********************/
 
@@ -314,6 +359,11 @@ div.event-info {
   font-size: 1em;
 }
 
+div.event-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 p.event-name {
   margin-bottom: .6em;
   font-size: 1.2em;
@@ -327,6 +377,11 @@ p.event-name {
 
 .clear {
   clear: both;
+}
+.event-index {
+  overflow: hidden;
+  background-color: #eee;
+  padding: 1em 0.8em;
 }
 
 .action-links {
@@ -346,19 +401,10 @@ section.sermons {
 Media Queries
 *********************/
 
-
-
 @media (min-width: 720px) {
 
   header {
-    margin-top: 3em;
     margin-bottom: 3em;
-  }
-
-  section.announcements {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 2em;
-    font-weight: bold;
   }
 
   #brand {
@@ -366,9 +412,8 @@ Media Queries
   }
 
   nav {
-    float: right;
     text-align: right;
-    padding: 2em 0;
+    padding: 1em 0;
   }
 
   nav ul.secondary-nav {
@@ -389,8 +434,16 @@ Media Queries
     margin: 1em auto;
   }
 
+  span.announcements {
+    display: inline-block;
+  }
+
   section.page-header {
     clear: both;
+  }
+
+  h2.section-title {
+    font-size: 2em;
   }
 
   section.event-show {
@@ -401,7 +454,7 @@ Media Queries
   }
 
   p.event-date {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-right: 5%;
   }
 
