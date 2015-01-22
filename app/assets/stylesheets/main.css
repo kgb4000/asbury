@@ -44,8 +44,10 @@ Heading
 
 .header-bg {
   background-image: url("/assets/bench.jpg");
+  height: 100%;
   background-position: center center;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 header {
@@ -69,7 +71,7 @@ span.announcements {
 
 #brand {
   text-align: center;
-  font-size: 1em;
+  font-size: .7em;
   margin-bottom: 1em;
   font-weight: 900;
   display: block;
@@ -78,7 +80,7 @@ span.announcements {
 
 h1.main-greeting {
   font-size: 2.2em;
-  margin: 1em 0;
+  margin: .5em 0;
   color: #fff;
 }
 
@@ -196,10 +198,8 @@ ul.nav-wrap > li a:hover {
 
 .page-header {
   width: 100%; 
-  height: auto;
-  padding-top: 5em;
+  padding-top: 2em;
   padding-bottom: 3em;
-  background-image: url("/assets/chuch-front.JPG");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -354,13 +354,14 @@ section.event-show {
 p.event-date {
   width: 30%;
   float: left;
-  margin-right: 2%;
+  margin-right: 5%;
   font-size: 2em;
   margin: 0;
+  text-align: center;
 }
 
 div.event-info {
-  width: 68%;
+  width: 65%;
   float: right;
   font-size: 1em;
 }
